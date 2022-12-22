@@ -56,6 +56,7 @@ const animationTimeline = () => {
   var x = document.getElementById("myAudio");
 
   tl
+    .call( playAudio())
     .to(".container", 0.1, {
       visibility: "visible"
     })
@@ -66,7 +67,7 @@ const animationTimeline = () => {
     .from(".two", 0.4, {
       opacity: 0,
       y: 10
-    }).call( playAudio())
+    })
     .to(
       ".one",
       0.7,
