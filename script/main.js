@@ -72,14 +72,14 @@ const animationTimeline = () => {
     playAudio();
     document.getElementById("lovebtn").style.display = "none";
     tl
-    .to(".container", 0.1, {
+    .to(".container", 0.5, {
       visibility: "visible"
     })
-    .from(".one", 0.7, {
+    .from(".one", 1, {
       opacity: 0,
       y: 10
     })
-    .from(".two", 0.4, {
+    .from(".two", 0.9, {
       opacity: 0,
       y: 10
     })
