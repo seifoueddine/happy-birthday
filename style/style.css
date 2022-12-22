@@ -389,6 +389,10 @@ body {
   margin: 10px 0 0;
 }
 
+.nine {
+  margin-top: -70px;
+}
+
 .nine p {
   font-size: 2rem;
   font-weight: lighter;
