@@ -58,7 +58,16 @@ const animationTimeline = () => {
   function playAudio() { 
     x.play(); 
   } 
-  tl
+ 
+
+  // tl.seek("currentStep");
+  // tl.timeScale(2);
+
+  // Restart Animation on click
+  const plyBtn = document.getElementById("play");
+  plyBtn.addEventListener("click", () => {
+    playAudio();
+    tl
     .to(".container", 0.1, {
       visibility: "visible"
     })
@@ -292,14 +301,6 @@ const animationTimeline = () => {
       0.5,
       "+=1"
     );
-
-  // tl.seek("currentStep");
-  // tl.timeScale(2);
-
-  // Restart Animation on click
-  const plyBtn = document.getElementById("play");
-  plyBtn.addEventListener("click", () => {
-    playAudio();
   });
 };
 
