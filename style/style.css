@@ -8,7 +8,7 @@ body {
 }
 
 .buttons {
-  width: 250px;
+  width: 210px;
   height: auto;
   font-family: cursive;
   font-size: 25px;
@@ -19,7 +19,7 @@ body {
 
 #button {
   background: linear-gradient(70deg, #FFE5E9, #FFC3CC);
-  color: #F05757;
+  color: #fa1515;
   position: absolute;
   top: 50%;
   left: 50%;
