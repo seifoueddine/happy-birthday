@@ -70,7 +70,7 @@ const animationTimeline = () => {
   const plyBtn = document.getElementById("play");
   plyBtn.addEventListener("click", () => {
     playAudio();
-    document.getElementById("lovebtn").style.display = "none";
+    document.getElementById("play").style.display = "none";
     tl
     .to(".container", 0.1, {
       visibility: "visible"
