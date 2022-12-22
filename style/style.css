@@ -8,8 +8,8 @@ body {
 }
 
 .buttons {
-  width: auto;
-  height: 80px;
+  width: 210px;
+  height: auto;
   font-family: cursive;
   font-size: 25px;
   position: absolute;
@@ -286,7 +286,7 @@ body {
   display: inline-block;
   max-width: 100%;
   height: auto;
-  border-radius: 9px;
+  border-radius: 15px;
 }
 
 .six .hat {
