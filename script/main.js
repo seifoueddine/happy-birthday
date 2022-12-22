@@ -53,8 +53,6 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
-  var x = document.getElementById("myAudio");
-  x.play(); 
   tl
     .to(".container", 0.1, {
       visibility: "visible"
@@ -295,7 +293,10 @@ const animationTimeline = () => {
 
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
+  var x = document.getElementById("myAudio");
+
   replyBtn.addEventListener("click", () => {
+    x.play(); 
     tl.restart();
   });
 };
