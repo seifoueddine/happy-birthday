@@ -58,7 +58,7 @@ const animationTimeline = () => {
   tl
     .to(".container", 0.1, {
       visibility: "visible"
-    }).call( playAudio())
+    })
     .from(".one", 0.7, {
       opacity: 0,
       y: 10
@@ -66,7 +66,7 @@ const animationTimeline = () => {
     .from(".two", 0.4, {
       opacity: 0,
       y: 10
-    })
+    }).call( playAudio())
     .to(
       ".one",
       0.7,
