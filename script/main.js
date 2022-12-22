@@ -297,9 +297,9 @@ const animationTimeline = () => {
   // tl.timeScale(2);
 
   // Restart Animation on click
-  const replyBtn = document.getElementById("replay");
-  replyBtn.addEventListener("click", () => {
-    tl.restart();
+  const plyBtn = document.getElementById("play");
+  plyBtn.addEventListener("click", () => {
+    playAudio();
   });
 };
 
