@@ -204,7 +204,7 @@ const animationTimeline = () => {
       },
       {
         opacity: 1,
-        y: -10000
+        y: -1000
       },
       0.2
     )
