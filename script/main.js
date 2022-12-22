@@ -67,10 +67,10 @@ const animationTimeline = () => {
   // tl.timeScale(2);
 
   // Restart Animation on click
-  const plyBtn = document.getElementById("play");
+  const plyBtn = document.getElementById("button");
   plyBtn.addEventListener("click", () => {
     playAudio();
-    document.getElementById("play").style.display = "none";
+    document.getElementById("lovebtn").style.display = "none";
     tl
     .to(".container", 0.1, {
       visibility: "visible"
