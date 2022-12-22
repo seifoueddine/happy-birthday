@@ -8,10 +8,10 @@ body {
 }
 
 .buttons {
-  width: 250px;
+  width: 210px;
   height: auto;
   font-family: cursive;
-  font-size: 40px;
+  font-size: 25px;
   position: absolute;
   border: 2px solid #f2c2c8;
   border-radius: 9px;
