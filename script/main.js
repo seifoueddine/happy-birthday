@@ -53,7 +53,8 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
-
+  var x = document.getElementById("myAudio");
+  x.play(); 
   tl
     .to(".container", 0.1, {
       visibility: "visible"
