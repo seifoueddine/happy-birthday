@@ -3,7 +3,7 @@
   "name": "Mon Amour ❤️❤️",
   "greetingText": "🎈🎈 j'espère que ma petite surprise va te plaire 🎈🎈",
   "wishText": "May the js.prototypes always be with you! ;)",
-  "imagePath": "img/lydia2.png",
+  "imagePath": "./img/lydia2.png",
   "text1": "C'est ton anniversaire!!! 🎂🎊",
   "textInChatBox": "Happy birthday to you!! Yeee! Many many happy blah blah...",
   "sendButtonLabel": "Envoyer",
