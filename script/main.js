@@ -52,6 +52,51 @@ const animationTimeline = () => {
     skewX: "-15deg"
   };
 
+  const easeOutQuart = "cubic-bezier(0.165, 0.84, 0.44, 1)";
+const randomNumberInRange = (min, max) => Math.random() * (max - min) + min;
+const btnHearts = document.querySelectorAll(".btn-heart");
+const createParticle = (x, y) => {
+  const width = randomNumberInRange(6, 36);
+  const tx = randomNumberInRange(-360, 360);
+  const ty = randomNumberInRange(-360, 360);
+  const rz = randomNumberInRange(0, 480);
+  const delay = randomNumberInRange(0, 240);
+  const duration = randomNumberInRange(1000, 5000);
+  const particle = document.createElement("div");
+  particle.className = "heart";
+  document.body.appendChild(particle);
+  const anime = particle.animate(
+    [
+      {
+        opacity: 1,
+        transform: `translate(-50%, -50%) translate(${x}px, ${y}px) rotate(-45deg)`
+      },
+      {
+        opacity: 0,
+        transform: `translate(-50%, -50%) translate(${x + tx}px, ${y + ty}px) rotate(${-45 + rz}deg)`
+      }
+    ],
+    {
+      duration,
+      delay,
+      easing: easeOutQuart
+    }
+  );
+  anime.onfinish = (e) => e.srcElement.effect.target.remove();
+};
+const createParticles = (x, y, n) => {
+  for (let i = 0; i < n; i++) {
+    createParticle(x, y);
+  }
+};
+btnHearts.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const x = e.clientX;
+    const y = e.clientY + window.scrollY;
+    createParticles(x, y, 50);
+  });
+});
+
   const tl = new TimelineMax();
   var x = document.getElementById("myAudio"); 
 
@@ -59,91 +104,7 @@ const animationTimeline = () => {
     x.play(); 
   } 
  
-  const btnLove = document.querySelector('.btn-love');
-btnLove.addEventListener('click',function(e){
-  if(!this.classList.contains('act')){
-  this.className += " act";
   
-  TweenMax.set('.circle,.small-ornament',{
-    rotation:0,
-    scale:0,
-  })
-  TweenMax.set('.ornament',{
-    opacity:0,
-    scale:1,
-  })
-  let Tl = new TimelineMax({});
-  Tl.to('.fa',0.1,{
-    scale:0,
-    ease:Back.easeNone,
-  })
-  
-  Tl.to('.circle',0.2,{
-    
-    scale:1.2,
-    opacity:1,
-    ease:Back.easeNone,
-  })
-  
-  Tl.to('.fa',0.2,{
-    delay:0.1,
-    scale:1.3,
-    color:'#e3274d',
-    ease:Ease.easeOut
-  })
-  Tl.to('.fa',0.2,{
-    scale:1,
-    ease:Ease.easeOut
-  })
- 
-  Tl = new TimelineMax({
-    delay:0.1,
-  });
-  
-  
-  Tl.to('#eclipse',0.2,{
-    
-    strokeWidth:10,
-    ease:Back.easeNone,
-  })
-  Tl.to('#eclipse',0.2,{
-    strokeWidth:0,
-    ease:Back.easeNone,
-  })
-  Tl = new TimelineMax({
-    delay:0.1,
-   });
-  Tl.to('.small-ornament',0.3,{
-    scale:0.8,
-    opacity:1,
-    ease:Linear.easeOut,
-  })
-  Tl.to('.small-ornament',0.2,{
-    scale:1.2,
-    opacity:1,
-    rotation:15,
-    ease:Ease.easeOut,
-  })
-  
-  
-  Tl = new TimelineMax({
-    delay:0.3,
-  });
-  Tl.to('.ornament',0.2,{
-    opacity:1,
-    ease:Ease.easeNone
-  })
-  Tl.to('.ornament',0.1,{
-    scale:0,
-    ease:Ease.easeOut
-  })
-  }else{
-    this.classList.remove('act');
-    TweenMax.set('.fa',{
-      color:'#c0c1c3',
-    })
-  }
-})
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
