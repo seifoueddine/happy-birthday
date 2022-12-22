@@ -56,7 +56,7 @@ const animationTimeline = () => {
   var x = document.getElementById("myAudio");
 
   tl
-    .call(  x.play())
+    .call( playAudio())
     .to(".container", 0.1, {
       visibility: "visible"
     })
@@ -291,6 +291,9 @@ const animationTimeline = () => {
       "+=1"
     );
 
+    function playAudio() { 
+      x.play(); 
+    } 
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
